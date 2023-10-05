@@ -1,0 +1,58 @@
+@import './base.css';
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Inter;
+}
+
+h1{
+  font-size: 2.2rem;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('../fonts/inter/Inter-Black.ttf') format("ttf");
+  src: local('../fonts/inter/Inter-Bold.ttf') format("ttf");
+  src: local('../fonts/inter/Inter-ExtraBold.ttf') format("ttf");
+  src: local('../fonts/inter/Inter-ExtraLight.ttf') format("ttf");
+  src: local('../fonts/inter/Inter-Light.ttf') format("ttf");
+  src: local('../fonts/inter/Inter-Medium.ttf') format("ttf");
+  src: local('../fonts/inter/Inter-Regular.ttf') format("ttf");
+  src: local('../fonts/inter/Inter-SemiBold.ttf') format("ttf");
+  src: local('../fonts/inter/Inter-Thin.ttf') format("ttf");
+}
+
+/*#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}*/
