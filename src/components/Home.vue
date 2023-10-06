@@ -1,21 +1,26 @@
 <template>
     <div class="home">
-        <img src="../assets/img/nav_logo.png">
+        <img id="logo" src="../assets/img/nav_logo.png">
     </div>
+    <img id="div" src="../assets/img/white_div.png">
 </template>
 
 <style scoped>
     .home{
         width: 100%;
-        height: 546px;
-        display: flex;
-        justify-content: center;
+        height: 346px;
         background-color: #484848;
     }
 
-    img{
+    #logo{
+        display: block;
         width: 375px;
-        height: 312px;
-        margin-top: 5em;
+        height: 100%;
+        margin-inline: auto;
+    }
+
+    #div{
+        width: 100%;
+        background-color: #484848;
     }
 </style>
