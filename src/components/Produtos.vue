@@ -1,5 +1,5 @@
 <template>
-    <div class="main">
+    <div class="main" id="produtos">
         <h1>Produtos</h1>
         <div class="content">
             <div class="indicator"><img src="../assets/img/left_arrow.png" class="arrow"></div>
@@ -30,6 +30,7 @@
 <style scoped>
     .main{
         background-color: #C50018;
+        padding: 80px 0 80px 0;
     }
 
     h1{

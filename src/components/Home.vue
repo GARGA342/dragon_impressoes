@@ -1,5 +1,5 @@
 <template>
-    <div class="home">
+    <div class="home" id="inicio">
         <img id="logo" src="../assets/img/nav_logo.png">
     </div>
     <img id="div" src="../assets/img/white_div.png">
@@ -8,7 +8,7 @@
 <style scoped>
     .home{
         width: 100%;
-        height: 346px;
+        padding-top: 100px;
         background-color: #484848;
     }
 

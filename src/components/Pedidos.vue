@@ -1,5 +1,5 @@
 <template>
-    <div class="main">
+    <div class="main" id="pedidos">
         <h1>Pedidos</h1>
         <div class="content">
             <div class="social">
@@ -20,7 +20,7 @@
 <style scoped>
     .main{
         background: #484848;
-        padding: 5.62rem 0 3.32rem 0;
+        padding: 5.62rem 0 5.72rem 0;
     }
 
     .content{
@@ -45,6 +45,8 @@
 
     .float_imgs{
         display: flex;
+        z-index: 0;
+        margin-top: 80px;
     }
 
     .float_imgs img{

@@ -1,5 +1,5 @@
 <template>
-    <div class="main">
+    <div class="main" id="sobre">
         <h1>Sobre nós</h1>
         <div class="content">
             <!-- Primeiro bloco -->
@@ -19,7 +19,7 @@
 
 <style scoped>
     .main{
-        margin-top: 30px;
+        padding-top: 65px;
         margin-inline: 4.69rem;
     }
 

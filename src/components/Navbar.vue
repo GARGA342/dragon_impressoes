@@ -1,17 +1,18 @@
 <template>
-    <div class="nav">
-        <img src='../assets/img/nav_logo.png' width="49px" height="40px"/>
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Produtos</a>
-            <a href="#">Pedidos</a>
-            <a href="#">Sobre</a>
+    <div class="nav_body">
+        <img src='../assets/img/nav_logo.png' class="nav_logo" alt="Logo da empresa"/>
+        <nav class="nav_links">
+            <a href="#inicio">Inicio</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#pedidos">Pedidos</a>
+            <a href="#sobre">Sobre</a>
         </nav>
     </div>
 </template>
 
 <style scoped>
-.nav{
+.nav_body{
+    position: fixed;
     background-color: #C50018;
     width: 100%;
     height: 4em;
@@ -20,25 +21,27 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     align-items: center;
     justify-content: space-between;
+    z-index: 1;
 }
 
-nav{
+.nav_links{
     display: flex;
     margin-right: 20px;
     gap: 10px;
 }
 
-a{
+.nav_links a{
     text-decoration: none;
     color: white;
     font-family: Inter;
 }
 
-a:hover{
+.nav_links a:hover{
     color:#FFAE03;
 }
 
-img{
+.nav_logo {
     padding: 10px;
+    width: 50px;
 }
 </style>
