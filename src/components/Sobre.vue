@@ -71,6 +71,7 @@
     }
 
     #div{
+        display: block;
         width: 100%;
         background-color: white;
     }
