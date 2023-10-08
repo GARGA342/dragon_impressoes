@@ -4,6 +4,7 @@ import Home from './components/Home.vue'
 import Sobre from './components/Sobre.vue'
 import Produtos from './components/Produtos.vue'
 import Pedidos from './components/Pedidos.vue'
+import Rodape from './components/Rodape.vue'
 </script>
 
 <template>
@@ -12,4 +13,5 @@ import Pedidos from './components/Pedidos.vue'
   <Sobre />
   <Produtos />
   <Pedidos />
+  <Rodape />
 </template>
