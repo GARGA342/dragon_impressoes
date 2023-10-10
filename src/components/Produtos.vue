@@ -30,7 +30,7 @@
 <style scoped>
     .main{
         background-color: #C50018;
-        padding: 80px 0 80px 0;
+        padding-bottom: 5rem;
     }
 
     h1{

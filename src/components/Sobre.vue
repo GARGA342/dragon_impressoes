@@ -14,13 +14,12 @@
             <p id="p3">Proin dignissim non orci id consequat. Curabitur et placerat augue, ut dignissim augue. Phasellus massa ligula, mollis quis lacus a, cursus lacinia risus. Phasellus eget nulla gravida, cursus est a, faucibus orci. Donec maximus purus id metus interdum, vel commodo diam suscipit.</p>
         </div>
     </div>
-    <img src="../assets/img/red_div.png" id="div">
 </template>
 
 <style scoped>
     .main{
-        padding-top: 65px;
         margin-inline: 4.69rem;
+        margin-bottom: 5rem;
     }
 
     .content{

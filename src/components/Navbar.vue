@@ -3,9 +3,9 @@
         <img src='../assets/img/nav_logo.png' class="nav_logo" alt="Logo da empresa"/>
         <nav class="nav_links">
             <a href="#inicio">Inicio</a>
-            <a href="#produtos">Produtos</a>
+            <a href="#home_div">Sobre</a>
+            <a href="#about_div">Produtos</a>
             <a href="#pedidos">Pedidos</a>
-            <a href="#sobre">Sobre</a>
         </nav>
     </div>
 </template>

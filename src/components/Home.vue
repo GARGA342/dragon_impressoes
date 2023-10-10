@@ -2,7 +2,6 @@
     <div class="home" id="inicio">
         <img id="logo" src="../assets/img/nav_logo.png">
     </div>
-    <img id="div" src="../assets/img/white_div.png">
 </template>
 
 <style scoped>
@@ -17,10 +16,5 @@
         width: 375px;
         height: 100%;
         margin-inline: auto;
-    }
-
-    #div{
-        width: 100%;
-        background-color: #484848;
     }
 </style>

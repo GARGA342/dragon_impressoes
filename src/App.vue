@@ -10,8 +10,24 @@ import Rodape from './components/Rodape.vue'
 <template>
   <Navbar />
   <Home />
+  <img id="home_div" src="./assets/img/white_div.png">
   <Sobre />
+  <img id="about_div" src="./assets/img/red_div.png">
   <Produtos />
   <Pedidos />
   <Rodape />
 </template>
+
+<style scoped>
+  #home_div{
+    display: block;
+    width: 100%;
+    background-color: #484848;
+  }
+
+  #about_div{
+    display: block;
+    width: 100%;
+    background-color: white;
+  }
+</style>
