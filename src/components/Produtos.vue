@@ -1,5 +1,5 @@
 <template>
-    <div class="main" id="produtos">
+    <section class="main" id="produtos">
         <h1>Produtos</h1>
         <div class="content">
             <div class="indicator"><img src="../assets/img/left_arrow.png" class="arrow"></div>
@@ -24,13 +24,14 @@
 
             <div class="indicator"><img src="../assets/img/right_arrow.png" class="arrow"></div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style scoped>
     .main{
         background-color: #C50018;
-        padding-bottom: 5rem;
+        padding: auto 0 auto;
+        min-height: 100vh;
     }
 
     h1{

@@ -1,5 +1,5 @@
 <template>
-    <div class="main" id="pedidos">
+    <section class="main" id="pedidos">
         <h1>Pedidos</h1>
         <div class="content">
             <div class="social">
@@ -14,7 +14,7 @@
                 <img id="f_img3" src="../assets/img/float_image3.png"/>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style scoped>

@@ -18,7 +18,7 @@ import Rodape from './components/Rodape.vue'
   <Rodape />
 </template>
 
-<style scoped>
+<style>
   #home_div{
     display: block;
     width: 100%;
