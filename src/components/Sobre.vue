@@ -81,28 +81,26 @@
 
     .l_transition{
         transform: translateX(-50%);
-        transition: transform 1.7s ease;
-        animation: fadein 3s;
-        -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 3s; /* Firefox < 16 */
-        -ms-animation: fadein 3s; /* Internet Explorer */
-         -o-animation: fadein 3s; /* Opera < 12.1 */
-            animation: fadein 3s;
-}
+        transition: transform 1.7s ease;  
+        opacity: 0;
+    }
 
     .r_transition{
         transform: translateX(+50%);
         transition: transform 1.7s ease;
+        opacity: 0;
+    }
+
+    .show{
+        transform: translateX(0);
+
         animation: fadein 3s;
         -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 3s; /* Firefox < 16 */
         -ms-animation: fadein 3s; /* Internet Explorer */
          -o-animation: fadein 3s; /* Opera < 12.1 */
             animation: fadein 3s;
-}
-
-    .r_transition.show, .l_transition.show{
-        transform: translateX(0);
+            opacity: 1;
     }
 
     @keyframes fadein {
