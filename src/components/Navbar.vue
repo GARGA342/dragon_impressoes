@@ -1,14 +1,27 @@
 <template>
     <div class="nav_body">
-        <a href="#inicio"><img src='../assets/img/nav_logo.png' class="nav_logo" alt="Logo da empresa"/></a>
+        <a @click="scrollToId('#inicio')"><img src='../assets/img/nav_logo.png' class="nav_logo" alt="Logo da empresa"/></a>
         <nav class="nav_links">
-            <a href="#inicio">Inicio</a>
-            <a href="#home_div">Sobre</a>
-            <a href="#about_div">Produtos</a>
-            <a href="#pedidos">Pedidos</a>
+            <a @click="scrollToId('#inicio')">Inicio</a>
+            <a @click="scrollToId('#home_div')">Sobre</a>
+            <a @click="scrollToId('#about_div')">Produtos</a>
+            <a @click="scrollToId('#pedidos')">Pedidos</a>
         </nav>
     </div>
 </template>
+
+<script setup>
+function scrollToId(id){
+  const section = document.querySelector(id);
+  if (section) {
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+}
+</script>
+
 
 <style scoped>
 .nav_body{
@@ -28,6 +41,7 @@
     display: flex;
     margin-right: 20px;
     gap: 10px;
+    cursor: pointer;
 }
 
 .nav_links a{

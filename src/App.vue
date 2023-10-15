@@ -14,7 +14,7 @@ import Rodape from './components/Rodape.vue'
   <Sobre />
   <img id="about_div" src="./assets/img/red_div.png">
   <Produtos />
-  <Pedidos />
+  <Pedidos id="pedidos"/>
   <Rodape />
 </template>
 

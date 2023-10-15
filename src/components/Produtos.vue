@@ -6,29 +6,29 @@
       <div class="carousel-container">
         <div class="carousel">
           <div class="slide">
-            <img src="../assets/img/cards/1.jpg" alt="Imagem 1" class="card_img"/>
+            <img src="../assets/img/cards/1.jpg" alt="Imagem 1" class="card_img" />
             <p class="card_p">Porta copos de madeira</p>
-            <button class="btn_pedido"><span>FAÇA SEU PEDIDO</span></button>
+            <button class="btn_pedido" @click="scrollToId('#pedidos')"><span>FAÇA SEU PEDIDO</span></button>
           </div>
           <div class="slide">
-            <img src="../assets/img/cards/2.jpg" alt="Imagem 2" class="card_img"/>
+            <img src="../assets/img/cards/2.jpg" alt="Imagem 2" class="card_img" />
             <p class="card_p">Artigos para decoração</p>
-            <button class="btn_pedido"><span>FAÇA SEU PEDIDO</span></button>
+            <button class="btn_pedido" @click="scrollToId('#pedidos')"><span>FAÇA SEU PEDIDO</span></button>
           </div>
           <div class="slide">
-            <img src="../assets/img/cards/3.jpg" alt="Imagem 3" class="card_img"/>
+            <img src="../assets/img/cards/3.jpg" alt="Imagem 3" class="card_img" />
             <p class="card_p">Porta copos em PLA</p>
-            <button class="btn_pedido"><span>FAÇA SEU PEDIDO</span></button>
+            <button class="btn_pedido" @click="scrollToId('#pedidos')"><span>FAÇA SEU PEDIDO</span></button>
           </div>
           <div class="slide">
-            <img src="../assets/img/cards/3.jpg" alt="Imagem 4" class="card_img"/>
+            <img src="../assets/img/cards/3.jpg" alt="Imagem 4" class="card_img" />
             <p class="card_p">EXEMPLO</p>
-            <button class="btn_pedido"><span>FAÇA SEU PEDIDO</span></button>
+            <button class="btn_pedido" @click="scrollToId('#pedidos')"><span>FAÇA SEU PEDIDO</span></button>
           </div>
           <div class="slide">
-            <img src="../assets/img/cards/3.jpg" alt="Imagem 4" class="card_img"/>
+            <img src="../assets/img/cards/3.jpg" alt="Imagem 4" class="card_img" />
             <p class="card_p">EXEMPLO</p>
-            <button class="btn_pedido"><span>FAÇA SEU PEDIDO</span></button>
+            <button class="btn_pedido" @click="scrollToId('#pedidos')"><span>FAÇA SEU PEDIDO</span></button>
           </div>
         </div>
       </div>
@@ -68,14 +68,14 @@ h1 {
 }
 
 .slide {
-    flex: 0 0 calc(100% / 4);
-    overflow: hidden;
-    border: 1px solid #484848;
-    border-radius: 10px;
-    padding: 20px 30px;
-    margin: 1rem 1.2rem 1.6rem 1.2rem;
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
-    background-color: white;
+  flex: 0 0 calc(100% / 4);
+  overflow: hidden;
+  border: 1px solid #484848;
+  border-radius: 10px;
+  padding: 20px 30px;
+  margin: 1rem 1.2rem 1.6rem 1.2rem;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
+  background-color: white;
 }
 
 .card_img {
@@ -89,7 +89,7 @@ h1 {
 .card_p {
   display: block;
   margin-top: 30px;
-  margin-left: .7rem;
+  margin-left: 0.7rem;
 }
 
 .btn_pedido {
@@ -110,26 +110,27 @@ h1 {
   font-family: Inter;
 }
 
-.next-button{
-    height: 80px;
-    width: 80px;
-    background: no-repeat center/80% url("../assets/img/right_arrow.svg");
-    border: none;
-    cursor: pointer;
-    margin-inline: auto;
+.next-button {
+  height: 80px;
+  width: 80px;
+  background: no-repeat center/80% url("../assets/img/right_arrow.svg");
+  border: none;
+  cursor: pointer;
+  margin-inline: auto;
 }
 
-.prev-button{
-    height: 80px;
-    width: 80px;
-    background: no-repeat center/80% url("../assets/img/left_arrow.svg");
-    border: none;
-    cursor: pointer;
-    margin-inline: auto;
-    transition: transform 0.3s;
+.prev-button {
+  height: 80px;
+  width: 80px;
+  background: no-repeat center/80% url("../assets/img/left_arrow.svg");
+  border: none;
+  cursor: pointer;
+  margin-inline: auto;
+  transition: transform 0.3s;
 }
 
-.prev-button:active, .next-button:active{
+.prev-button:active,
+.next-button:active {
   transform: translateY(10px);
 }
 </style>
@@ -161,7 +162,7 @@ onMounted(() => {
     currentIndex =
       (currentIndex - 1 + (slides.length - numVisibleSlides + 1)) %
       (slides.length - numVisibleSlides + 1);
-      intervalTime = 3000;
+    intervalTime = 3000;
     updateCarousel();
   }
 
@@ -174,4 +175,15 @@ onMounted(() => {
 
   setInterval(autoNextSlide, intervalTime);
 });
+
+function scrollToId(id){
+  const section = document.querySelector(id);
+  if (section) {
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+}
+
 </script>

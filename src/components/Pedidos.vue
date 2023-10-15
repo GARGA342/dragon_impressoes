@@ -1,5 +1,5 @@
 <template>
-    <section class="main" id="pedidos">
+    <section class="main">
         <h1>Pedidos</h1>
         <div class="content">
             <div class="social">
