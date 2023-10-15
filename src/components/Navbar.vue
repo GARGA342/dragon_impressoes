@@ -1,6 +1,6 @@
 <template>
     <div class="nav_body">
-        <img src='../assets/img/nav_logo.png' class="nav_logo" alt="Logo da empresa"/>
+        <a href="#inicio"><img src='../assets/img/nav_logo.png' class="nav_logo" alt="Logo da empresa"/></a>
         <nav class="nav_links">
             <a href="#inicio">Inicio</a>
             <a href="#home_div">Sobre</a>
@@ -43,5 +43,6 @@
 .nav_logo {
     padding: 10px;
     width: 50px;
+    cursor: pointer;
 }
 </style>
