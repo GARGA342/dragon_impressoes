@@ -18,7 +18,7 @@
 
 <style scoped>
     .main{
-        margin: auto 0 auto 4.69rem;
+        margin: auto 0;
         min-height: 80vh;
         overflow-x: hidden;
     }
@@ -32,8 +32,9 @@
     }
 
     #p1{
-        grid-column-start: 1;
-        grid-column-end: 3;
+        /*grid-column-start: 1;
+        grid-column-end: 3;*/
+        grid-column: 1 / 3;
         grid-row-start: 1;
     }
 
@@ -43,8 +44,9 @@
     }
 
     #p3{
-        grid-column-start: 2;
-        grid-column-end: 4;
+        /*grid-column-start: 2;
+        grid-column-end: 4;*/
+        grid-column: 2 / 4;
         grid-row-start: 3;
     }
 
@@ -63,6 +65,7 @@
     }
 
     .main h1{
+        margin-inline: 4.69rem;
         color: #000;
         font-weight: bold;
         margin-bottom: 1.5rem;
@@ -130,6 +133,34 @@
     @-o-keyframes fadein {
         from { opacity: 0; }
         to   { opacity: 1; }
+    }
+
+    @media (max-width: 1215px) {
+        .main h1{
+            margin-left: 2rem !important;
+        }
+
+        .content{
+            display: flex;
+            max-width: 1000px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+    
+        #p1, #p2{
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        #p3{
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .content img{
+            max-width: 30% !important;
+            margin: 0 auto;
+        }
     }
 </style>
 
