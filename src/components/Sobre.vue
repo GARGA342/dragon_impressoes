@@ -162,6 +162,22 @@
             margin: 0 auto;
         }
     }
+
+    @media (max-width: 975px) {
+        .content p{
+            max-width: 100% !important;
+            margin-inline: 10px !important;
+        }
+
+        .content img{
+            max-width: 80% !important;
+            margin-inline: 10px !important;
+        }
+
+        .main h1{
+            margin-inline: 10px !important;
+        }
+    }
 </style>
 
 <script setup>
