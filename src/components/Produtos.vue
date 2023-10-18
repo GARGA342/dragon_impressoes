@@ -8,27 +8,37 @@
           <div class="slide">
             <img src="../assets/img/cards/1.jpg" alt="Imagem 1" class="card_img" />
             <p class="card_p">Porta copos de madeira</p>
-            <button class="btn_pedido" @click="scrollToId('#pedidos')"><span>FAÇA SEU PEDIDO</span></button>
+            <button class="btn_pedido" @click="scrollToId('#pedidos')">
+              <span>FAÇA SEU PEDIDO</span>
+            </button>
           </div>
           <div class="slide">
             <img src="../assets/img/cards/2.jpg" alt="Imagem 2" class="card_img" />
             <p class="card_p">Artigos para decoração</p>
-            <button class="btn_pedido" @click="scrollToId('#pedidos')"><span>FAÇA SEU PEDIDO</span></button>
+            <button class="btn_pedido" @click="scrollToId('#pedidos')">
+              <span>FAÇA SEU PEDIDO</span>
+            </button>
           </div>
           <div class="slide">
             <img src="../assets/img/cards/3.jpg" alt="Imagem 3" class="card_img" />
             <p class="card_p">Porta copos em PLA</p>
-            <button class="btn_pedido" @click="scrollToId('#pedidos')"><span>FAÇA SEU PEDIDO</span></button>
+            <button class="btn_pedido" @click="scrollToId('#pedidos')">
+              <span>FAÇA SEU PEDIDO</span>
+            </button>
           </div>
           <div class="slide">
             <img src="../assets/img/cards/3.jpg" alt="Imagem 4" class="card_img" />
             <p class="card_p">EXEMPLO</p>
-            <button class="btn_pedido" @click="scrollToId('#pedidos')"><span>FAÇA SEU PEDIDO</span></button>
+            <button class="btn_pedido" @click="scrollToId('#pedidos')">
+              <span>FAÇA SEU PEDIDO</span>
+            </button>
           </div>
           <div class="slide">
             <img src="../assets/img/cards/3.jpg" alt="Imagem 4" class="card_img" />
             <p class="card_p">EXEMPLO</p>
-            <button class="btn_pedido" @click="scrollToId('#pedidos')"><span>FAÇA SEU PEDIDO</span></button>
+            <button class="btn_pedido" @click="scrollToId('#pedidos')">
+              <span>FAÇA SEU PEDIDO</span>
+            </button>
           </div>
         </div>
       </div>
@@ -79,7 +89,7 @@ h1 {
 }
 
 .card_img {
-  max-width: 300px;
+  max-width: 100%;
   display: block;
   margin-top: 10px;
   box-shadow: #484848 5px 5px 20px 1px;
@@ -133,6 +143,18 @@ h1 {
 .next-button:active {
   transform: translateY(10px);
 }
+
+@media (max-width: 1215px) {
+  .slide {
+    flex: 0 0 calc(100% / 3);
+  }
+
+  .carousel-container {
+    overflow: hidden;
+    width: 600px;
+    margin-inline: auto;
+  }
+}
 </style>
 
 <script setup>
@@ -141,28 +163,22 @@ import { onMounted } from "vue";
 onMounted(() => {
   const carousel = document.querySelector(".carousel");
   const slides = document.querySelectorAll(".slide");
-
   let currentIndex = 0;
-  const slideWidth = slides[0].clientWidth;
   const numVisibleSlides = 3;
-  let intervalTime = 3000;
+  const intervalTime = 3000;
 
   function updateCarousel() {
-    const offset = currentIndex * (slideWidth + 40);
+    const offset = currentIndex * (document.querySelectorAll(".slide")[0].clientWidth + 40);
     carousel.style.transform = `translateX(-${offset}px)`;
   }
 
   function nextSlide() {
     currentIndex = (currentIndex + 1) % (slides.length - numVisibleSlides + 1);
-    intervalTime = 3000;
     updateCarousel();
   }
 
   function prevSlide() {
-    currentIndex =
-      (currentIndex - 1 + (slides.length - numVisibleSlides + 1)) %
-      (slides.length - numVisibleSlides + 1);
-    intervalTime = 3000;
+    currentIndex =(currentIndex - 1 + (slides.length - numVisibleSlides + 1)) % (slides.length - numVisibleSlides + 1);
     updateCarousel();
   }
 
@@ -176,7 +192,7 @@ onMounted(() => {
   setInterval(autoNextSlide, intervalTime);
 });
 
-function scrollToId(id){
+function scrollToId(id) {
   const section = document.querySelector(id);
   if (section) {
     section.scrollIntoView({
@@ -185,5 +201,4 @@ function scrollToId(id){
     });
   }
 }
-
 </script>
