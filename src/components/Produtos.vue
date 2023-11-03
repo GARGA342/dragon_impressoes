@@ -5,6 +5,7 @@
       <vueper-slides
         class="no-shadow slides"
         :visible-slides="3"
+        autoplay
         slide-multiple
         :gap="3"
         :slide-ratio="1 / 4"
