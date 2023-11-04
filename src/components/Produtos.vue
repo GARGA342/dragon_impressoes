@@ -1,98 +1,79 @@
 <template>
-  <section class="main">
+  <div class="main_product">
     <h1>Produtos</h1>
-    <div class="content">
-      <button class="prev-button"></button>
-      <div class="carousel-container">
-        <div class="carousel">
-          <div class="slide">
-            <img src="../assets/img/cards/1.jpg" alt="Imagem 1" class="card_img" />
-            <p class="card_p">Porta copos de madeira</p>
-            <button class="btn_pedido" @click="scrollToId('#pedidos')"><span>FAÇA SEU PEDIDO</span></button>
-          </div>
-          <div class="slide">
-            <img src="../assets/img/cards/2.jpg" alt="Imagem 2" class="card_img" />
-            <p class="card_p">Artigos para decoração</p>
-            <button class="btn_pedido" @click="scrollToId('#pedidos')"><span>FAÇA SEU PEDIDO</span></button>
-          </div>
-          <div class="slide">
-            <img src="../assets/img/cards/3.jpg" alt="Imagem 3" class="card_img" />
-            <p class="card_p">Porta copos em PLA</p>
-            <button class="btn_pedido" @click="scrollToId('#pedidos')"><span>FAÇA SEU PEDIDO</span></button>
-          </div>
-          <div class="slide">
-            <img src="../assets/img/cards/3.jpg" alt="Imagem 4" class="card_img" />
-            <p class="card_p">EXEMPLO</p>
-            <button class="btn_pedido" @click="scrollToId('#pedidos')"><span>FAÇA SEU PEDIDO</span></button>
-          </div>
-          <div class="slide">
-            <img src="../assets/img/cards/3.jpg" alt="Imagem 4" class="card_img" />
-            <p class="card_p">EXEMPLO</p>
-            <button class="btn_pedido" @click="scrollToId('#pedidos')"><span>FAÇA SEU PEDIDO</span></button>
-          </div>
-        </div>
-      </div>
-      <button class="next-button"></button>
+    <div class="container">
+      <vueper-slides
+        class="no-shadow slides"
+        :visible-slides="3"
+        autoplay
+        slide-multiple
+        :gap="3"
+        :slide-ratio="1 / 4"
+        :dragging-distance="200"
+        :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }"
+      >
+        <vueper-slide
+          class="card"
+          v-for="(card, i) in cards"
+          :key="i"
+        >
+          <template #content>
+            <div
+              class="vueperslide__content-wrapper"
+            >
+              <img :src="card.img" class="card_img">
+              <p>{{ card.title }}</p>
+              <button><span>FAÇA SEU PEDIDO</span></button>
+            </div>
+          </template>
+        </vueper-slide>
+      </vueper-slides>
     </div>
-  </section>
+  </div>
 </template>
 
-<style scoped>
-.main {
-  background-color: #c50018;
-  min-height: 85vh;
-}
+<script>
+import { VueperSlides, VueperSlide } from "vueperslides";
+import "vueperslides/dist/vueperslides.css";
 
-h1 {
-  color: white;
-  font-weight: bold;
-  margin-inline: 4.69rem;
-}
+export default {
+  components: {
+    VueperSlides,
+    VueperSlide,
+  },
+  data() {
+    return {
+      cards: [
+        { title: "EXEMPLO", img: "../src/assets/img/cards/1.jpg" },
+        { title: "EXEMPLO", img: "../src/assets/img/cards/2.jpg" },
+        { title: "EXEMPLO", img: "../src/assets/img/cards/3.jpg" },
+        { title: "EXEMPLO", img: "../src/assets/img/cards/4.jpg" },
+        { title: "EXEMPLO", img: "../src/assets/img/cards/4.jpg" },
+      ],
+    };
+  },
+};
+</script>
 
-.carousel-container {
-  overflow: hidden;
-  width: 1200px;
-  margin-inline: auto;
-}
-
-.content {
+<style>
+.card {
   display: flex;
-  align-items: center;
-  background: rgba(132, 0, 16, 0.28);
-  margin-top: 20px;
-}
-
-.carousel {
-  display: flex;
-  transition: transform 0.3s;
-}
-
-.slide {
-  flex: 0 0 calc(100% / 4);
-  overflow: hidden;
-  border: 1px solid #484848;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.25);
+  margin-bottom: 1rem;
   border-radius: 10px;
-  padding: 20px 30px;
-  margin: 1rem 1.2rem 1.6rem 1.2rem;
-  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
   background-color: white;
 }
 
-.card_img {
-  max-width: 300px;
+.card_img{
+  max-width: 80%;
+  border-radius: 5%;
   display: block;
-  margin-top: 10px;
+  margin-inline: auto;
   box-shadow: #484848 5px 5px 20px 1px;
-  border-radius: 10px;
 }
 
-.card_p {
-  display: block;
-  margin-top: 30px;
-  margin-left: 0.7rem;
-}
-
-.btn_pedido {
+.vueperslide__content-wrapper button{
   display: block;
   border-radius: 0.8rem;
   background: #c50018;
@@ -104,84 +85,54 @@ h1 {
   cursor: pointer;
 }
 
-.btn_pedido span {
+.vueperslide__content-wrapper button span{
+  color: white;
+  font-weight: 800;
+  font-family: Inter;
+}
+
+.vueperslide__content-wrapper{
+  display: block !important;
+  padding-top: 10px;
+  text-align: unset !important;
+}
+
+.vueperslide__content-wrapper p{
+  padding: 1rem 0 0 2rem;
+}
+
+.vueperslides__parallax-wrapper{
+  padding-bottom: calc(120px + 20%) !important;
+}
+
+.default {
+  box-shadow: 0 0 1px #484848, 0 0 1px #484848 !important;
+  background-color: white !important;
+}
+
+.vueperslides__bullet--active .default {
+  color: #b30016;
+  background-color: #b30016 !important;
+}
+
+.vueperslides__arrows--outside {
   color: white;
 }
 
-.next-button {
-  height: 80px;
-  width: 80px;
-  background: no-repeat center/80% url("../assets/img/right_arrow.svg");
-  border: none;
-  cursor: pointer;
-  margin-inline: auto;
+.main_product {
+  background-color: #c50018;
+  padding: 50px 0;
 }
 
-.prev-button {
-  height: 80px;
-  width: 80px;
-  background: no-repeat center/80% url("../assets/img/left_arrow.svg");
-  border: none;
-  cursor: pointer;
-  margin-inline: auto;
-  transition: transform 0.3s;
+.container {
+  background-color: #b30016;
+  margin-top: 1.5rem;
+  padding: 5rem 5rem 2rem 5rem;
 }
 
-.prev-button:active,
-.next-button:active {
-  transform: translateY(10px);
+h1 {
+  color: white;
+  font-weight: bold;
+  margin-inline: 4.69rem;
 }
 </style>
-
-<script setup>
-import { onMounted } from "vue";
-
-onMounted(() => {
-  const carousel = document.querySelector(".carousel");
-  const slides = document.querySelectorAll(".slide");
-
-  let currentIndex = 0;
-  const slideWidth = slides[0].clientWidth;
-  const numVisibleSlides = 3;
-  let intervalTime = 3000;
-
-  function updateCarousel() {
-    const offset = currentIndex * (slideWidth + 40);
-    carousel.style.transform = `translateX(-${offset}px)`;
-  }
-
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % (slides.length - numVisibleSlides + 1);
-    intervalTime = 3000;
-    updateCarousel();
-  }
-
-  function prevSlide() {
-    currentIndex =
-      (currentIndex - 1 + (slides.length - numVisibleSlides + 1)) %
-      (slides.length - numVisibleSlides + 1);
-    intervalTime = 3000;
-    updateCarousel();
-  }
-
-  function autoNextSlide() {
-    nextSlide();
-  }
-
-  document.querySelector(".next-button").addEventListener("click", nextSlide);
-  document.querySelector(".prev-button").addEventListener("click", prevSlide);
-
-  setInterval(autoNextSlide, intervalTime);
-});
-
-function scrollToId(id){
-  const section = document.querySelector(id);
-  if (section) {
-    section.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }
-}
-
-</script>
