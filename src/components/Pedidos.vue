@@ -20,7 +20,8 @@
 <style scoped>
     .main{
         background: #484848;
-        padding: 5.62rem 0 5.72rem 0;
+        padding: 5.62rem 0 0 0;
+        height: 100vh;
     }
 
     .content{

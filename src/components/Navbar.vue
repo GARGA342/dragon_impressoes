@@ -30,7 +30,6 @@ function scrollToId(id){
     width: 100%;
     height: 4em;
     display: flex;
-    /*box-shadow: 0px 2px 10px #000;*/
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     align-items: center;
     justify-content: space-between;

@@ -30,10 +30,4 @@ import Rodape from './components/Rodape.vue'
     width: 100%;
     background-color: white;
   }
-
-  @media (max-width: 1215px) {
-    #about_div{
-      margin-top: 5rem;
-    }
-  }
 </style>
