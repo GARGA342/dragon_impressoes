@@ -3,7 +3,7 @@
     <h1>Produtos</h1>
     <div class="container">
       <vueper-slides
-        class="no-shadow slides"
+        class="no-shadow"
         :visible-slides="3"
         autoplay
         slide-multiple
@@ -48,7 +48,8 @@ export default {
         { title: "EXEMPLO", img: "../src/assets/img/cards/2.jpg" },
         { title: "EXEMPLO", img: "../src/assets/img/cards/3.jpg" },
         { title: "EXEMPLO", img: "../src/assets/img/cards/4.jpg" },
-        { title: "EXEMPLO", img: "../src/assets/img/cards/4.jpg" },
+        { title: "EXEMPLO", img: "../src/assets/img/cards/1.jpg" },
+        { title: "EXEMPLO", img: "../src/assets/img/cards/2.jpg" },
       ],
     };
   },
@@ -105,19 +106,28 @@ export default {
   padding-bottom: calc(120px + 20%) !important;
 }
 
-.default {
-  box-shadow: 0 0 1px #484848, 0 0 1px #484848 !important;
-  background-color: white !important;
+.vueperslides__bullet .default {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  box-shadow: none;
+  transition: 0.3s;
+  width: .7rem;
+  height: .7rem;
+  transition: .5s;
 }
 
 .vueperslides__bullet--active .default {
-  color: #b30016;
-  background-color: #b30016 !important;
+  background-color: white;
 }
 
-.vueperslides__arrows--outside {
-  color: white;
+.vueperslides__bullet span {
+  display: block;
+  color: #fff;
+  font-size: 10px;
+  opacity: 0.8;
 }
+
+.vueperslides__arrow {color: white}
 
 .main_product {
   background-color: #c50018;
