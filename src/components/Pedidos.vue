@@ -7,15 +7,30 @@
           <img src="../assets/img/wpp.svg" />
           <div class="background_hover"><span>WhatsApp</span></div>
         </a>
-        <a class="network" href="https://www.facebook.com/dragonimpressoes3d" target="_blank"  id="fb">
+        <a
+          class="network"
+          href="https://www.facebook.com/dragonimpressoes3d"
+          target="_blank"
+          id="fb"
+        >
           <img id="fb" src="../assets/img/fb.svg" />
           <div class="background_hover"><span>Facebook</span></div>
         </a>
-        <a class="network" href="https://www.linkedin.com/in/dragon-impressoes-3d/" target="_blank" id="in">
+        <a
+          class="network"
+          href="https://www.linkedin.com/in/dragon-impressoes-3d/"
+          target="_blank"
+          id="in"
+        >
           <img id="in" src="../assets/img/in.svg" />
           <div class="background_hover"><span>LinkedIn</span></div>
         </a>
-        <a class="network" href="https://www.instagram.com/dragon_impressoes_3d/" target="_blank" id="insta">
+        <a
+          class="network"
+          href="https://www.instagram.com/dragon_impressoes_3d/"
+          target="_blank"
+          id="insta"
+        >
           <img id="insta" src="../assets/img/insta.svg" />
           <div class="background_hover"><span>Instagram</span></div>
         </a>
@@ -59,29 +74,34 @@
 }
 
 .float_imgs {
-  display: flex;
+  position: absolute;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto auto auto;
+  max-height: 80vh;
+  right: 0;
   z-index: 0;
-  margin-top: 80px;
 }
 
-.float_imgs img {
-  position: absolute;
-  max-width: 400px;
+#f_img1,
+#f_img2,
+#f_img3 {
+  max-width: 80%;
 }
 
 #f_img1 {
-  right: 30rem;
-  margin-top: 12rem;
+  grid-column: 1 / 3;
+  grid-row-start: 2;
 }
 
 #f_img2 {
-  right: 25rem;
-  margin-top: -7rem;
+  grid-column: 2 / 4;
+  grid-row-start: 1;
 }
 
 #f_img3 {
-  right: 2rem;
-  margin-top: 3rem;
+  grid-column: 3 / 4;
+  grid-row-start: 2;
 }
 
 h1 {
@@ -123,5 +143,78 @@ h1 {
   display: flex;
   cursor: pointer;
   color: black;
+}
+
+@media (max-width: 1215px) {
+  .float_imgs {
+    max-width: 600px;
+  }
+
+  .social {
+    margin-top: 3.5rem;
+    margin-left: 5rem;
+    gap: 2rem;
+  }
+
+  .social img {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .network:hover > .background_hover {
+    width: 12rem;
+    height: 3rem;
+  }
+}
+
+@media (max-width: 975px) {
+  .background_hover {
+    z-index: 0;
+  }
+  .social img {
+    z-index: 1;
+  }
+
+  .social{
+    max-width: unset;
+  }
+
+  .main {
+    height: 170vh;
+  }
+  .content {
+    display: block;
+  }
+  .float_imgs {
+    display: block;
+    right: unset;
+    width: auto;
+    margin: 3rem auto auto 5rem;
+  }
+
+  #f_img1,
+  #f_img2,
+  #f_img3 {
+    max-width: 60%;
+    margin-bottom: 2rem;
+  }
+
+  .background_hover {
+    width: 90%;
+    height: 3rem;
+    margin-inline: auto;
+    z-index: 0;
+    background-color: white;
+    border-radius: 50px;
+  }
+
+  .network:hover > .background_hover {
+    width: 95%;
+    height: 3rem;
+  }
+
+  .background_hover span {
+    display: flex;
+  }
 }
 </style>
