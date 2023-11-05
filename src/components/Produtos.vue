@@ -8,9 +8,8 @@
         autoplay
         slide-multiple
         :gap="3"
-        :slide-ratio="1 / 4"
-        :dragging-distance="200"
-        :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }"
+        :breakpoints="breakpoints"
+        :touchable="false"
       >
         <vueper-slide
           class="card"
@@ -18,12 +17,10 @@
           :key="i"
         >
           <template #content>
-            <div
-              class="vueperslide__content-wrapper"
-            >
+            <div class="vueperslide__content-wrapper">
               <img :src="card.img" class="card_img">
               <p>{{ card.title }}</p>
-              <button><span>FAÇA SEU PEDIDO</span></button>
+              <button @click="clickEvent"><span>FAÇA SEU PEDIDO</span></button>
             </div>
           </template>
         </vueper-slide>
@@ -32,27 +29,32 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
 
-export default {
-  components: {
-    VueperSlides,
-    VueperSlide,
-  },
-  data() {
-    return {
-      cards: [
-        { title: "EXEMPLO", img: "../src/assets/img/cards/1.jpg" },
-        { title: "EXEMPLO", img: "../src/assets/img/cards/2.jpg" },
-        { title: "EXEMPLO", img: "../src/assets/img/cards/3.jpg" },
-        { title: "EXEMPLO", img: "../src/assets/img/cards/4.jpg" },
-        { title: "EXEMPLO", img: "../src/assets/img/cards/4.jpg" },
-      ],
-    };
-  },
-};
+const emit = defineEmits(["clickEvent"]);
+
+const cards = [
+ { title: "Porta copos de madeira", img: "../src/assets/img/cards/1.jpg" },
+ { title: "Dragão de PLA", img: "../src/assets/img/cards/2.jpg" },
+ { title: "Porta copos de PLA", img: "../src/assets/img/cards/3.jpg" },
+ { title: "EXEMPLO", img: "../src/assets/img/cards/4.jpg" },
+ { title: "EXEMPLO", img: "../src/assets/img/cards/4.jpg" },
+];
+
+const breakpoints = {
+    1215: {
+      visibleSlides: 2, slideMultiple: 2
+    },
+    975: {
+      visibleSlides: 1, slideMultiple: 1
+    }
+  };
+
+function clickEvent() {
+  emit("clickEvent", "#pedidos");
+}
 </script>
 
 <style>
@@ -92,10 +94,13 @@ h1 {
 }
 
 .vueperslide__content-wrapper button{
-  display: block;
+  display: flex;
   border-radius: 0.8rem;
   background: #c50018;
   width: 90%;
+  height: 10%;
+  justify-content: center;
+  align-items: center;
   margin-inline: auto;
   margin-top: 15px;
   padding: 0.5rem;
@@ -145,4 +150,37 @@ h1 {
 }
 
 .vueperslides__arrow {color: white}
+
+@media (max-width: 1215px) {
+  .vueperslides__parallax-wrapper{
+    padding-bottom: calc(120px + 30%) !important;
+  }
+
+  .vueperslides__inner{
+    padding: 20px;
+  }
+
+}
+
+@media (max-width: 975px) {
+  .vueperslides__parallax-wrapper{
+    padding-bottom: calc(120px + 70%) !important;
+  }
+
+  .vueperslides__inner{
+    padding: 80px;
+  }
+
+  .container{
+    padding: 0px;
+  }
+
+  .vueperslide__content-wrapper span{
+    font-size: medium;
+  }
+
+  .vueperslide__content-wrapper p{
+    font-size: larger;
+  }
+}
 </style>

@@ -23,7 +23,7 @@ function scrollEvent(id){
  <img id="home_div" src="./assets/img/white_div.png" />
  <Sobre />
  <img id="about_div" src="./assets/img/red_div.png" />
- <Produtos />
+ <Produtos v-on:click-event="scrollEvent" />
  <Pedidos id="pedidos" />
  <Rodape />
 </template>
