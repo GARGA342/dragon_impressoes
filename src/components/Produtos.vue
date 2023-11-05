@@ -59,6 +59,7 @@ export default {
 .main_product {
   background-color: #c50018;
   padding: 10px 0 50px 0;
+  z-index: 0;
 }
 
 .container {

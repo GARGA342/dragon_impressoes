@@ -30,7 +30,7 @@ function scrollEvent(id) {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   align-items: center;
   justify-content: space-between;
-  z-index: 1;
+  z-index: 3;
 }
 
 .nav_links {
