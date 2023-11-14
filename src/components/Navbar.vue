@@ -19,16 +19,16 @@
 <script setup>
 import { ref } from 'vue'
 const emit = defineEmits(["scrollEvent"]);
-let src = ref('../src/assets/img/nav_icon.svg')
+let src = ref('https://raw.githubusercontent.com/GARGA342/dragon_impressoes/724db19c1e1aaaaa035fdfe8396abbef141db3c2/src/assets/img/nav_icon.svg')
 
 function hamburger_menu() {
   let element = document.querySelector('.nav_links')
   if(element.classList.contains('active')){
     element.classList.remove('active')
-    src.value = '../src/assets/img/nav_icon.svg'
+    src.value = 'https://raw.githubusercontent.com/GARGA342/dragon_impressoes/724db19c1e1aaaaa035fdfe8396abbef141db3c2/src/assets/img/nav_icon.svg'
   }else{
     element.classList.add('active')
-    src.value = '../src/assets/img/cross.svg'
+    src.value = 'https://raw.githubusercontent.com/GARGA342/dragon_impressoes/724db19c1e1aaaaa035fdfe8396abbef141db3c2/src/assets/img/cross.svg'
   }
 }
 
