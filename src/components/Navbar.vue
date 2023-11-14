@@ -94,7 +94,7 @@ menu a {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 975px) {
   .nav_links menu {
     position: absolute;
     top: 8vh;
