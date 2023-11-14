@@ -185,7 +185,7 @@ h1 {
   }
 
   .main {
-    height: 200vh;
+    height: 230vh;
   }
   .content {
     display: block;
