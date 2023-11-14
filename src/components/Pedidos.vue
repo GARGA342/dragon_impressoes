@@ -3,7 +3,12 @@
     <h1>Pedidos</h1>
     <div class="content">
       <div class="social">
-        <a class="network" id="wpp">
+        <a
+          class="network"
+          id="wpp"
+          href="https://api.whatsapp.com/send/?phone=55997108405&text&type=phone_number&app_absent=0"
+          target="_blank"
+        >
           <img src="../assets/img/wpp.svg" />
           <div class="background_hover"><span>WhatsApp</span></div>
         </a>
@@ -175,7 +180,7 @@ h1 {
     z-index: 1;
   }
 
-  .social{
+  .social {
     max-width: unset;
   }
 
