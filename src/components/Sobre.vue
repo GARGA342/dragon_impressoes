@@ -32,8 +32,6 @@
     }
 
     #p1{
-        /*grid-column-start: 1;
-        grid-column-end: 3;*/
         grid-column: 1 / 3;
         grid-row-start: 1;
     }
@@ -44,8 +42,6 @@
     }
 
     #p3{
-        /*grid-column-start: 2;
-        grid-column-end: 4;*/
         grid-column: 2 / 4;
         grid-row-start: 3;
     }

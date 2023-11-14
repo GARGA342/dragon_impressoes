@@ -79,7 +79,7 @@ function scrollEvent(id) {
 menu a {
   text-decoration: none;
   color: white;
-  font-family: Inter;
+  font-family: Inter, "Gill Sans", sans-serif;
   cursor: pointer;
 
 }
