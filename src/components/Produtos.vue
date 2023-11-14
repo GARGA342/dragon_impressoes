@@ -36,11 +36,15 @@ import "vueperslides/dist/vueperslides.css";
 const emit = defineEmits(["clickEvent"]);
 
 const cards = [
- { title: "Porta copos de madeira", img: "../src/assets/img/cards/1.jpg" },
- { title: "Dragão de PLA", img: "../src/assets/img/cards/2.jpg" },
- { title: "Porta copos de PLA", img: "../src/assets/img/cards/3.jpg" },
- { title: "EXEMPLO", img: "../src/assets/img/cards/4.jpg" },
- { title: "EXEMPLO", img: "../src/assets/img/cards/4.jpg" },
+ { title: "Porta copos de madeira", img: "../src/assets/img/cards/1.png" },
+ { title: "Acessórios para decoração", img: "../src/assets/img/cards/2.png" },
+ { title: "Porta copos de PLA", img: "../src/assets/img/cards/3.png" },
+ { title: "Acessórios Personalizados", img: "../src/assets/img/cards/4.png" },
+ { title: "Bustos de personagens", img: "../src/assets/img/cards/5.png" },
+ { title: "Placas para divulgação de marca", img: "../src/assets/img/cards/6.png" },
+ { title: "Placas personalizadas", img: "../src/assets/img/cards/7.png" },
+ { title: "Impressões em resina", img: "../src/assets/img/cards/8.png" },
+ { title: "Troféus personalizados", img: "../src/assets/img/cards/9.png" },
 ];
 
 const breakpoints = {
@@ -86,7 +90,8 @@ h1 {
 }
 
 .card_img{
-  max-width: 80%;
+  max-width: 60%;
+  max-height: 70%;
   border-radius: 5%;
   display: block;
   margin-inline: auto;

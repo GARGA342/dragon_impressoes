@@ -18,7 +18,6 @@
 
 <style scoped>
     .main{
-        margin: auto;
         min-height: 80vh;
         overflow-x: hidden;
     }
