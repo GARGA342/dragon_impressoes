@@ -36,15 +36,15 @@ import "vueperslides/dist/vueperslides.css";
 const emit = defineEmits(["clickEvent"]);
 
 const cards = [
- { title: "Porta copos de madeira", img: "../src/assets/img/cards/1.png" },
- { title: "Acessórios para decoração", img: "../src/assets/img/cards/2.png" },
- { title: "Porta copos de PLA", img: "../src/assets/img/cards/3.png" },
- { title: "Acessórios Personalizados", img: "../src/assets/img/cards/4.png" },
- { title: "Bustos de personagens", img: "../src/assets/img/cards/5.png" },
- { title: "Placas para divulgação de marca", img: "../src/assets/img/cards/6.png" },
- { title: "Placas personalizadas", img: "../src/assets/img/cards/7.png" },
- { title: "Impressões em resina", img: "../src/assets/img/cards/8.png" },
- { title: "Troféus personalizados", img: "../src/assets/img/cards/9.png" },
+ { title: "Porta copos de madeira", img: "https://github.com/GARGA342/dragon_impressoes/blob/master/src/assets/img/cards/1.png?raw=true" },
+ { title: "Acessórios para decoração", img: "https://github.com/GARGA342/dragon_impressoes/blob/master/src/assets/img/cards/2.png?raw=true" },
+ { title: "Porta copos de PLA", img: "https://github.com/GARGA342/dragon_impressoes/blob/master/src/assets/img/cards/3.png?raw=true" },
+ { title: "Acessórios Personalizados", img: "https://github.com/GARGA342/dragon_impressoes/blob/master/src/assets/img/cards/4.png?raw=true" },
+ { title: "Bustos de personagens", img: "https://github.com/GARGA342/dragon_impressoes/blob/master/src/assets/img/cards/5.png?raw=true" },
+ { title: "Placas para divulgação de marca", img: "https://github.com/GARGA342/dragon_impressoes/blob/master/src/assets/img/cards/6.png?raw=true" },
+ { title: "Placas personalizadas", img: "https://github.com/GARGA342/dragon_impressoes/blob/master/src/assets/img/cards/7.png?raw=true" },
+ { title: "Impressões em resina", img: "https://github.com/GARGA342/dragon_impressoes/blob/master/src/assets/img/cards/8.png?raw=true" },
+ { title: "Troféus personalizados", img: "https://github.com/GARGA342/dragon_impressoes/blob/master/src/assets/img/cards/9.png?raw=true" },
 ];
 
 const breakpoints = {
