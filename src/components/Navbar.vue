@@ -24,7 +24,7 @@ let src = ref(
 );
 
 function hamburger_menu() {
-  let element = document.querySelector(".nav_links");
+  const element = document.querySelector(".nav_links");
   if (element.classList.contains("active")) {
     element.classList.remove("active");
     src.value =
@@ -43,7 +43,9 @@ function checkClick(element) {
       !element.contains(e.target) &&
       !document.querySelector(".hamburguer_logo").contains(e.target)
     ) {
-      hamburger_menu();
+      element.classList.remove("active");
+      src.value =
+        "https://raw.githubusercontent.com/GARGA342/dragon_impressoes/724db19c1e1aaaaa035fdfe8396abbef141db3c2/src/assets/img/nav_icon.svg";
     }
   };
 }
