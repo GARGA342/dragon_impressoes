@@ -52,7 +52,7 @@ function scrollEvent(id) {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   align-items: center;
   justify-content: space-between;
-  z-index: 3;
+  z-index: 5;
 }
 
 .hamburguer_logo {
@@ -63,6 +63,7 @@ function scrollEvent(id) {
   cursor: pointer;
   width: 30px;
   height: 24px;
+  z-index: 4;
 }
 
 .nav_links {
@@ -80,6 +81,7 @@ menu a {
   text-decoration: none;
   color: white;
   font-family: Inter, "Gill Sans", sans-serif;
+  font-size: medium;
   cursor: pointer;
 
 }
@@ -97,11 +99,11 @@ menu a {
 @media (max-width: 975px) {
   .nav_links menu {
     position: absolute;
-    top: 8vh;
+    top: 4vh;
     right: 0;
     margin-right: unset !important;
     width: 50vw;
-    height: 96vh;
+    height: 100vh;
     background-color: #c50018;
     flex-direction: column;
     align-items: center;
