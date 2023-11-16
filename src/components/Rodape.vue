@@ -15,4 +15,7 @@
     footer img{
         height: 70px;
     }
+    footer p{
+        font-size: 90%;
+    }
 </style>

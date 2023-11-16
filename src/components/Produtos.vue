@@ -116,6 +116,7 @@ h1 {
 .vueperslide__content-wrapper button span{
   color: white;
   font-weight: 800;
+  font-size: 90%;
   font-family: Inter, "Gill Sans", sans-serif;
 }
 

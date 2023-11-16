@@ -52,8 +52,7 @@
 <style scoped>
 .main {
   background: #484848;
-  padding: 5.62rem 0 0 0;
-  height: 100vh;
+  padding: 5.62rem 0 5.62rem 0;
 }
 
 .content {
@@ -79,12 +78,12 @@
 }
 
 .float_imgs {
-  position: absolute;
+  position: relative;
   display: grid;
+  margin-left: 30%;
   gap: 20px;
   grid-template-columns: auto auto auto;
-  max-height: 80vh;
-  right: 0;
+  max-height: 70%;
   z-index: 0;
 }
 
@@ -157,7 +156,7 @@ h1 {
 
   .social {
     margin-top: 3.5rem;
-    margin-left: 5rem;
+    margin-left: 10%;
     gap: 2rem;
   }
 
@@ -184,9 +183,6 @@ h1 {
     max-width: unset;
   }
 
-  .main {
-    height: 230vh;
-  }
   .content {
     display: block;
   }
