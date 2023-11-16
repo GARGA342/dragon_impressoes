@@ -17,27 +17,43 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 const emit = defineEmits(["scrollEvent"]);
-let src = ref('https://raw.githubusercontent.com/GARGA342/dragon_impressoes/724db19c1e1aaaaa035fdfe8396abbef141db3c2/src/assets/img/nav_icon.svg')
+let src = ref(
+  "https://raw.githubusercontent.com/GARGA342/dragon_impressoes/724db19c1e1aaaaa035fdfe8396abbef141db3c2/src/assets/img/nav_icon.svg"
+);
 
 function hamburger_menu() {
-  let element = document.querySelector('.nav_links')
-  if(element.classList.contains('active')){
-    element.classList.remove('active')
-    src.value = 'https://raw.githubusercontent.com/GARGA342/dragon_impressoes/724db19c1e1aaaaa035fdfe8396abbef141db3c2/src/assets/img/nav_icon.svg'
-  }else{
-    element.classList.add('active')
-    src.value = 'https://raw.githubusercontent.com/GARGA342/dragon_impressoes/724db19c1e1aaaaa035fdfe8396abbef141db3c2/src/assets/img/cross.svg'
+  let element = document.querySelector(".nav_links");
+  if (element.classList.contains("active")) {
+    element.classList.remove("active");
+    src.value =
+      "https://raw.githubusercontent.com/GARGA342/dragon_impressoes/724db19c1e1aaaaa035fdfe8396abbef141db3c2/src/assets/img/nav_icon.svg";
+  } else {
+    element.classList.add("active");
+    src.value =
+      "https://raw.githubusercontent.com/GARGA342/dragon_impressoes/724db19c1e1aaaaa035fdfe8396abbef141db3c2/src/assets/img/cross.svg";
+    checkClick();
   }
 }
 
+function checkClick() {
+  document.onclick = (e) => {
+    if (
+      !element.contains(e.target) &&
+      !document.querySelector(".hamburguer_logo").contains(e.target)
+    ) {
+      hamburger_menu();
+    }
+  };
+}
+
 function scrollEvent(id) {
-  if(id === '#home'){
-    emit("scrollEvent", '#inicio');
-  }else{
+  if (id === "#home") {
+    emit("scrollEvent", "#inicio");
+  } else {
     emit("scrollEvent", id);
-    hamburger_menu()
+    hamburger_menu();
   }
 }
 </script>
@@ -83,7 +99,6 @@ menu a {
   font-family: Inter, "Gill Sans", sans-serif;
   font-size: medium;
   cursor: pointer;
-
 }
 
 .nav_links a:hover {
@@ -109,15 +124,15 @@ menu a {
     align-items: center;
     justify-content: space-around;
     transform: translateX(100%);
-    transition: .2s ease-in;
+    transition: 0.2s ease-in;
     z-index: 3;
   }
 
-  .active menu{
+  .active menu {
     transform: translateX(0);
   }
 
-  menu a{
+  menu a {
     cursor: pointer;
   }
 
