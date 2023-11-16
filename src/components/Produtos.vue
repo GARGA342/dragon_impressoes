@@ -9,7 +9,7 @@
         slide-multiple
         :gap="3"
         :breakpoints="breakpoints"
-        :touchable="false"
+        :touchable="true"
       >
         <vueper-slide
           class="card"
@@ -174,7 +174,7 @@ h1 {
   }
 
   .vueperslides__inner{
-    padding: 80px;
+    padding-bottom: 80px;
   }
 
   .container{
@@ -186,7 +186,11 @@ h1 {
   }
 
   .vueperslide__content-wrapper p{
-    font-size: larger;
+    font-size: small;
+  }
+
+  .vueperslides__arrow{
+    display: none;
   }
 }
 </style>
