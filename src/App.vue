@@ -30,13 +30,14 @@ function scrollEvent(id){
 
 <style>
 #home_div {
-  display: block;
+  display: flex;
   width: 100%;
   background-color: #484848;
+  cursor: unset;
 }
 
 #about_div {
-  display: block;
+  display: flex;
   width: 100%;
   background-color: white;
 }
