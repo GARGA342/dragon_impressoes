@@ -33,11 +33,11 @@ function hamburger_menu() {
     element.classList.add("active");
     src.value =
       "https://raw.githubusercontent.com/GARGA342/dragon_impressoes/724db19c1e1aaaaa035fdfe8396abbef141db3c2/src/assets/img/cross.svg";
-    checkClick();
+    checkClick(element);
   }
 }
 
-function checkClick() {
+function checkClick(element) {
   document.onclick = (e) => {
     if (
       !element.contains(e.target) &&
