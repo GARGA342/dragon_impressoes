@@ -128,6 +128,7 @@ h1 {
 
 .vueperslide__content-wrapper p{
   padding: 1rem 0 0 2rem;
+  font-size: large;
 }
 
 .vueperslides__parallax-wrapper{
@@ -183,10 +184,6 @@ h1 {
 
   .vueperslide__content-wrapper span{
     font-size: medium;
-  }
-
-  .vueperslide__content-wrapper p{
-    font-size: small;
   }
 
   .vueperslides__arrow{
