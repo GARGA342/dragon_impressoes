@@ -6,7 +6,7 @@
 
     <nav class="nav_links">
       <img class="hamburguer_logo" @click="hamburger_menu" :src="src" />
-      <menu>
+      <menu class="menu">
         <a @click="scrollEvent('#inicio')">Inicio</a>
         <a @click="scrollEvent('#home_div')">Sobre</a>
         <a @click="scrollEvent('#about_div')">Produtos</a>
@@ -26,6 +26,7 @@ let src = ref(
 function hamburger_menu() {
   const element = document.querySelector(".nav_links");
   if (element.classList.contains("active")) {
+    //document.querySelector('.menu').style.display = 'flex'
     element.classList.remove("active");
     src.value =
       "https://raw.githubusercontent.com/GARGA342/dragon_impressoes/724db19c1e1aaaaa035fdfe8396abbef141db3c2/src/assets/img/nav_icon.svg";
@@ -88,14 +89,14 @@ function scrollEvent(id) {
   display: contents;
 }
 
-.nav_links menu {
+.nav_links .menu {
   display: flex;
   margin-right: 20px;
   gap: 10px;
   align-items: center;
 }
 
-menu a {
+.menu a {
   text-decoration: none;
   color: white;
   font-family: Inter, "Gill Sans", sans-serif;
@@ -114,7 +115,7 @@ menu a {
 }
 
 @media (max-width: 975px) {
-  .nav_links menu {
+  .nav_links .menu {
     position: absolute;
     top: 4vh;
     right: 0;
@@ -126,16 +127,18 @@ menu a {
     align-items: center;
     justify-content: space-around;
     transform: translateX(100%);
-    transition: 0.2s ease-in;
+    transition: .2s ease-in;
     z-index: 3;
   }
 
-  .active menu {
+  .active .menu {
+    display: flex;
     transform: translateX(0);
   }
 
-  menu a {
+  .menu a {
     cursor: pointer;
+    margin-bottom: 10%;
   }
 
   .hamburguer_logo {
