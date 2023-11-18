@@ -1,29 +1,16 @@
-# dragon_impressoes
+# DRAGON IMPRESSÕES
 
-This template should help get you started developing with Vue 3 in Vite.
+Landing page da @dragon_impressoes_3d
 
-## Recommended IDE Setup
+### Frameworks utilizados:
+- Vuejs
+- Vueper-slides
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### Documentação
 
-## Customize configuration
+[vuejs](https://vuejs.org/guide/introduction.html)
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+[vueper-slides](https://antoniandre.github.io/vueper-slides/)
+### Autor
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+- [@GARGA342](https://github.com/GARGA342)
