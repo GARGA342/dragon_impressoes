@@ -5,7 +5,7 @@
       <vueper-slides
         class="no-shadow slides"
         :visible-slides="3"
-        autoplay
+        
         slide-multiple
         :gap="3"
         :breakpoints="breakpoints"
@@ -38,8 +38,8 @@ import "vueperslides/dist/vueperslides.css";
 const emit = defineEmits(["clickEvent"]);
 
 const cards = [
- { title: "Porta copos de madeira", img: "../src/assets/img/cards/1.png" },
- { title: "Acessórios para decoração", img: "../assets/img/cards/2.png" },
+ { title: "Porta copos de madeira", img: "/src/assets/img/cards/1.png"},
+ { title: "Acessórios para decoração", img: "../src/assets/img/cards/2.png" },
  { title: "Porta copos de PLA", img: "https://github.com/GARGA342/dragon_impressoes/blob/master/src/assets/img/cards/3.png?raw=true" },
  { title: "Acessórios Personalizados", img: "https://github.com/GARGA342/dragon_impressoes/blob/master/src/assets/img/cards/4.png?raw=true" },
  { title: "Bustos de personagens", img: "https://github.com/GARGA342/dragon_impressoes/blob/master/src/assets/img/cards/5.png?raw=true" },
