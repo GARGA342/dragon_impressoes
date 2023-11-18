@@ -125,10 +125,11 @@ function scrollEvent(id) {
     background-color: #c50018;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     transform: translateX(100%);
     transition: .2s ease-in;
     z-index: 3;
+    gap: unset;
   }
 
   .active .menu {
@@ -138,7 +139,7 @@ function scrollEvent(id) {
 
   .menu a {
     cursor: pointer;
-    margin-bottom: 10%;
+    margin-bottom: 20%;
   }
 
   .hamburguer_logo {
