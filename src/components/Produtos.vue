@@ -33,11 +33,13 @@
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
 
+//git add . && git commit -m "Path image test" && git push origin test
+
 const emit = defineEmits(["clickEvent"]);
 
 const cards = [
- { title: "Porta copos de madeira", img: "https://github.com/GARGA342/dragon_impressoes/blob/master/src/assets/img/cards/1.png?raw=true" },
- { title: "Acessórios para decoração", img: "https://github.com/GARGA342/dragon_impressoes/blob/master/src/assets/img/cards/2.png?raw=true" },
+ { title: "Porta copos de madeira", img: "../src/assets/img/cards/1.png" },
+ { title: "Acessórios para decoração", img: "../assets/img/cards/2.png" },
  { title: "Porta copos de PLA", img: "https://github.com/GARGA342/dragon_impressoes/blob/master/src/assets/img/cards/3.png?raw=true" },
  { title: "Acessórios Personalizados", img: "https://github.com/GARGA342/dragon_impressoes/blob/master/src/assets/img/cards/4.png?raw=true" },
  { title: "Bustos de personagens", img: "https://github.com/GARGA342/dragon_impressoes/blob/master/src/assets/img/cards/5.png?raw=true" },
