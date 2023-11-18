@@ -5,7 +5,7 @@
       <vueper-slides
         class="no-shadow slides"
         :visible-slides="3"
-        
+        autoplay
         slide-multiple
         :gap="3"
         :breakpoints="breakpoints"
@@ -38,9 +38,9 @@ import image3 from '@/assets/img/cards/3.png'
 import image4 from '@/assets/img/cards/4.png'
 import image5 from '@/assets/img/cards/5.png'
 import image6 from '@/assets/img/cards/6.png'
-
-
-//git add . && git commit -m "Path image test" && git push origin test
+import image7 from '@/assets/img/cards/7.png'
+import image8 from '@/assets/img/cards/8.png'
+import image9 from '@/assets/img/cards/9.png'
 
 const emit = defineEmits(["clickEvent"]);
 
@@ -51,9 +51,9 @@ const cards = [
  { title: "Acessórios Personalizados", img: image4 },
  { title: "Bustos de personagens", img: image5 },
  { title: "Placas para divulgação de marca", img: image6 },
- { title: "Placas personalizadas", img: "https://github.com/GARGA342/dragon_impressoes/blob/master/src/assets/img/cards/7.png?raw=true" },
- { title: "Impressões em resina", img: "https://github.com/GARGA342/dragon_impressoes/blob/master/src/assets/img/cards/8.png?raw=true" },
- { title: "Troféus personalizados", img: "https://github.com/GARGA342/dragon_impressoes/blob/master/src/assets/img/cards/9.png?raw=true" },
+ { title: "Placas personalizadas", img: image7 },
+ { title: "Impressões em resina", img: image8 },
+ { title: "Troféus personalizados", img: image9 },
 ];
 
 const breakpoints = {

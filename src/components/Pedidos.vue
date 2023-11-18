@@ -9,7 +9,7 @@
           href="https://api.whatsapp.com/send/?phone=55997108405&text&type=phone_number&app_absent=0"
           target="_blank"
         >
-          <img src="../assets/img/wpp.svg" />
+          <img src="@/assets/img/wpp.svg" />
           <div class="background_hover"><span>WhatsApp</span></div>
         </a>
         <a
@@ -18,7 +18,7 @@
           target="_blank"
           id="fb"
         >
-          <img id="fb" src="../assets/img/fb.svg" />
+          <img id="fb" src="@/assets/img/fb.svg" />
           <div class="background_hover"><span>Facebook</span></div>
         </a>
         <a
@@ -27,7 +27,7 @@
           target="_blank"
           id="in"
         >
-          <img id="in" src="../assets/img/in.svg" />
+          <img id="in" src="@/assets/img/in.svg" />
           <div class="background_hover"><span>LinkedIn</span></div>
         </a>
         <a
@@ -36,14 +36,14 @@
           target="_blank"
           id="insta"
         >
-          <img id="insta" src="../assets/img/insta.svg" />
+          <img id="insta" src="@/assets/img/insta.svg" />
           <div class="background_hover"><span>Instagram</span></div>
         </a>
       </div>
       <div class="float_imgs">
-        <img id="f_img1" src="../assets/img/float_image2.png" />
-        <img id="f_img2" src="../assets/img/float_image1.png" />
-        <img id="f_img3" src="../assets/img/float_image3.png" />
+        <img id="f_img1" src="@/assets/img/float_image2.png" />
+        <img id="f_img2" src="@/assets/img/float_image1.png" />
+        <img id="f_img3" src="@/assets/img/float_image3.png" />
       </div>
     </div>
   </section>

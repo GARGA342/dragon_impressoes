@@ -1,7 +1,7 @@
 <template>
   <div class="nav_body">
     <a @click="scrollEvent('#home')"
-      ><img src="../assets/img/nav_logo.png" class="nav_logo" alt="Logo da empresa"
+      ><img src="@/assets/img/nav_logo.png" class="nav_logo" alt="Logo da empresa"
     /></a>
 
     <nav class="nav_links">
@@ -19,21 +19,20 @@
 <script setup>
 import { ref } from "vue";
 const emit = defineEmits(["scrollEvent"]);
-let src = ref(
-  "https://raw.githubusercontent.com/GARGA342/dragon_impressoes/724db19c1e1aaaaa035fdfe8396abbef141db3c2/src/assets/img/nav_icon.svg"
-);
+import nav_icon from '@/assets/img/nav_icon.svg'
+import cross from '@/assets/img/cross.svg'
+
+let src = ref(nav_icon);
 
 function hamburger_menu() {
   const element = document.querySelector(".nav_links");
   if (element.classList.contains("active")) {
     //document.querySelector('.menu').style.display = 'flex'
     element.classList.remove("active");
-    src.value =
-      "https://raw.githubusercontent.com/GARGA342/dragon_impressoes/724db19c1e1aaaaa035fdfe8396abbef141db3c2/src/assets/img/nav_icon.svg";
+    src.value = nav_icon;
   } else {
     element.classList.add("active");
-    src.value =
-      "https://raw.githubusercontent.com/GARGA342/dragon_impressoes/724db19c1e1aaaaa035fdfe8396abbef141db3c2/src/assets/img/cross.svg";
+    src.value = cross;
     checkClick(element);
   }
 }
@@ -45,8 +44,7 @@ function checkClick(element) {
       !document.querySelector(".hamburguer_logo").contains(e.target)
     ) {
       element.classList.remove("active");
-      src.value =
-        "https://raw.githubusercontent.com/GARGA342/dragon_impressoes/724db19c1e1aaaaa035fdfe8396abbef141db3c2/src/assets/img/nav_icon.svg";
+      src.value = nav_icon;
     }
   };
 }

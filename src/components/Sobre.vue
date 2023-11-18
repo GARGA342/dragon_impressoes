@@ -4,13 +4,13 @@
         <div class="content">
             <!-- Primeiro bloco -->
             <p id="p1" class="l_transition">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id faucibus ligula. Donec posuere vestibulum lacinia. Phasellus ut magna orci. Maecenas vel magna in odio fermentum congue sit amet at nisi. Proin dignissim non orci id consequat. Curabitur et placerat augue, ut dignissim augue. Phasellus massa ligula, mollis quis lacus a, cursus lacinia risus. Phasellus eget nulla gravida, cursus est a, faucibus orci.</p>
-            <img src="../assets/img/generic-1.png" class="r_transition" id="rimg">
+            <img src="@/assets/img/generic-1.png" class="r_transition" id="rimg">
             
             <!-- Paŕagrafo ao centro -->
             <p id="p2" class="l_transition">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id faucibus ligula. Donec posuere vestibulum lacinia. Phasellus ut magna orci. Maecenas vel magna in odio fermentum congue sit amet at nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id faucibus ligula. Donec posuere vestibulum lacinia.</p>
            
             <!-- Último bloco -->
-            <img src="../assets/img/generic-1.png" class="l_transition" id="limg">
+            <img src="@/assets/img/generic-1.png" class="l_transition" id="limg">
             <p id="p3" class="r_transition">Proin dignissim non orci id consequat. Curabitur et placerat augue, ut dignissim augue. Phasellus massa ligula, mollis quis lacus a, cursus lacinia risus. Phasellus eget nulla gravida, cursus est a, faucibus orci. Donec maximus purus id metus interdum, vel commodo diam suscipit.</p>
         </div>
     </section>
