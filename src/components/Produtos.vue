@@ -9,7 +9,7 @@
         slide-multiple
         :gap="3"
         :breakpoints="breakpoints"
-        :touchable="true"
+        :touchable="false"
       >
         <vueper-slide
           class="card"
@@ -61,7 +61,7 @@ const breakpoints = {
       visibleSlides: 2, slideMultiple: 2
     },
     975: {
-      visibleSlides: 1, slideMultiple: 1
+      visibleSlides: 1, slideMultiple: 1, touchable: true
     }
   };
 

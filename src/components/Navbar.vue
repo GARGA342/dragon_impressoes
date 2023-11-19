@@ -27,7 +27,6 @@ let src = ref(nav_icon);
 function hamburger_menu() {
   const element = document.querySelector(".nav_links");
   if (element.classList.contains("active")) {
-    //document.querySelector('.menu').style.display = 'flex'
     element.classList.remove("active");
     src.value = nav_icon;
   } else {
